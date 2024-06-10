@@ -32,6 +32,11 @@ projectFairServer.use(express.json())
 //server use router
 projectFairServer.use(router)
 
+//first argument - by which name the folder have to be called
+//second arg - exporting this folder
+projectFairServer.use('/uploads',express.static('./uploads'))
+
+
 //7)customize port
 const PORT = 3000 || process.env.PORT
 
